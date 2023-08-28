@@ -1,34 +1,33 @@
 $(document).ready(function () {
 
+    /* Bg-color */
+
+    const bg = $('#bg-color')
+
+    bg.click(function () {
+        $('body').toggleClass('switch-light switch-dark')
+        $('label.error').toggleClass('white-error')
+    })
+
+    /* Reset */
+
+    $('.error').hide()
+
     /* Mask */
 
-    $('#cpf').mask('000.000.000-00')
-
     $('#tel').mask('(00) 00000-0000')
-
-    $('#cep').mask('00000-000')
 
     /* Validate */
 
     $.validator.addMethod('nomeCompleto', function () {
-        const name = $('#full-name').val()
+        const name = $('#name').val()
         const nameArray = name.trim().split(' ')
         return nameArray.length >= 2
     })
 
-    $.validator.addMethod('endereçoCompleto', function () {
-        const endereço = $('#endereço').val()
-        const endereçoArray = endereço.trim().split(' ')
-        const tamanho = endereçoArray.length
-
-        const ultimoElemento = parseInt(endereçoArray[tamanho - 1])
-        const primeiroElemento = parseInt(endereçoArray[0])
-        return !isNaN(ultimoElemento) && tamanho >= 2 && isNaN(primeiroElemento)
-    })
-
     $('form').validate({
         rules: {
-            nome: {
+            name: {
                 required: true,
                 nomeCompleto: true
             },
@@ -40,34 +39,18 @@ $(document).ready(function () {
                 required: true,
                 minlength: 15
             },
-            cpf: {
-                required: true,
-                minlength: 14
+            checkbox: {
+                required: true
             },
-            endereço: {
-                required: true,
-                endereçoCompleto: true
-            },
-            cep: {
-                required: true,
-                minlength: 9
-            }
         },
         messages: {
-            endereço: 'Digite o endereço',
-            nome: 'Digite seu nome completo',
-            cep: {
-                required: 'Campo obrigatório',
-                minlength: '8 digitos (min.)'
-            },
+            name: 'Nome completo',
             tel: {
                 required: 'Campo obrigatório',
                 minlength: '11 digitos (min.)'
             },
-            cpf: {
-                required: 'Campo obrigatório',
-                minlength: '11 digitos (min.)'
-            }
+            email: 'Email inválido',
+            checkbox: 'Concorde com os termos'
         },
         submitHandler: function (form) {
             $('form input').val('')
