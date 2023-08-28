@@ -3,80 +3,52 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="build/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link rel="icon" href="imgs/Logo.png" type="image/x-icon">
+    <title>B > A</title>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="branding">
-                <img src="https://via.placeholder.com/120x70" />
+    <div class="conatiner-main">
+        <div class="container" id="title">
+            <div class="container" id="container-title">
+                <h1>Maior Que</h1>
+                <h2>B > A</h2>
             </div>
-            <nav>
-                <ul class="menu">
-                    <li>
-                        <a href="#">Início</a>
-                    </li>
-                    <li>
-                        <a href="#">Produtos</a>
-                    </li>
-                </ul>
-            </nav>
         </div>
-    </header>
-    <section>
         <div class="container">
-            <h2>Produtos</h2>
-            <ul class="products">
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/180x180" />
-                    <h4>Nome do produto</h4>
-                    <p>
-                        Descrição do produto, cor, tamanho, textura, etc.
-                    </p>
-                    <a href="#" class="product-button">
-                        Ver detalhes
-                    </a>
-                </li>
-            </ul>
+            <form id="formulario">
+                <h2 class="title-main">Relatar Erro</h2>
+                <input id="email" type="email" placeholder="e-mail" required>
+                <textarea id="assunto" required placeholder="assunto"></textarea>
+                <h2 class="verificação">Verificação</h2>
+                <p class="msg">Digite B > A, assim</p>
+                <p class="msg">sabermos se é humano 🤖❌</p>
+                <input id="A" placeholder="valor A" type="text" required>
+                <p class="error-p-A">Digite somente numeros</p>
+                <input id="B" placeholder="valor B" type="Text" required>
+                <p class="error-p-B">Digite somente numeros</p>
+                <div class="btns">
+                    <button type="submit">Verificar</button>
+                    <button type="reset">Resetar</button>
+                </div>
+                <p class="correto"> &#x2713; Parabéns, B > A &#x1F604;<br>Formulário Enviado</p>
+                <p class="incorreto"> &#x2717; Infelizmente, B &lt; A &#x1F61E;</p>
+                <p class="empate">&#x2717; Empate, B = A &#x1f914;</p>
+            </form>
         </div>
-    </section>
+    </div>
+
+
+    <script src="main.js"></script>
 </body>
 
 </html>
