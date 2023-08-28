@@ -1,53 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-    <link rel="icon" href="imgs/Logo.png" type="image/x-icon">
-    <title>B > A</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Lista de Tarefas</title>
 </head>
 
 <body>
-    <div class="conatiner-main">
-        <div class="container" id="title">
-            <div class="container" id="container-title">
-                <h1>Maior Que</h1>
-                <h2>B > A</h2>
-            </div>
-        </div>
+    <section>
         <div class="container">
-            <form id="formulario">
-                <h2 class="title-main">Relatar Erro</h2>
-                <input id="email" type="email" placeholder="e-mail" required>
-                <textarea id="assunto" required placeholder="assunto"></textarea>
-                <h2 class="verificação">Verificação</h2>
-                <p class="msg">Digite B > A, assim</p>
-                <p class="msg">sabermos se é humano 🤖❌</p>
-                <input id="A" placeholder="valor A" type="text" required>
-                <p class="error-p-A">Digite somente numeros</p>
-                <input id="B" placeholder="valor B" type="Text" required>
-                <p class="error-p-B">Digite somente numeros</p>
-                <div class="btns">
-                    <button type="submit">Verificar</button>
-                    <button type="reset">Resetar</button>
-                </div>
-                <p class="correto"> &#x2713; Parabéns, B > A &#x1F604;<br>Formulário Enviado</p>
-                <p class="incorreto"> &#x2717; Infelizmente, B &lt; A &#x1F61E;</p>
-                <p class="empate">&#x2717; Empate, B = A &#x1f914;</p>
-            </form>
+            <header>
+                <form>
+                    <input required type="text" placeholder="Tarefa" id="input">
+                    <button type="submit">Adicionar +</button>
+                </form>
+            </header>
+            <main>
+                <ul>
+                </ul>
+            </main>
         </div>
-    </div>
-
-
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="main.js"></script>
 </body>
 
